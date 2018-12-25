@@ -1,0 +1,28 @@
+.margin-custom {
+  margin-left: 12%;
+}
+
+a {
+  margin: 0 30px;
+  color: rgb(65, 65, 65);
+  font-weight: bolder;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.active{
+  color: #b52e2b;
+}
+
+a:hover{
+  transition: 0.3s;
+  color: #b52e2b;
+}
+
+.search {
+  margin: 1%;
+  border: solid 0px black;
+  border-radius: 20px;
+  height: 30px;
+  float: right
+}

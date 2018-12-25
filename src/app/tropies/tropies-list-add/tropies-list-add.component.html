@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-light table-hover table-inverse table-responsive">
+      <thead class="thead-inverse">
+        <tr align="center">
+          <th>Title</th>
+          <th>Champion Year's</th>
+          <th>Photo</th>
+          <th></th>
+        </tr>
+      </thead>
+      <ng-container *ngFor="let tropies of tropiesArray">
+        <tr>
+          <td>{{tropies.title}}</td>
+          <td>{{tropies.champYear}}</td>
+          <td><img src="{{tropies.photo}}" alt="{{tropies.title}}" width="50px" height="80px"></td>
+          <td>
+            <div class="btn-group">
+              <button class="btn btn-outline-info btn-sm" (click)="service().populateForm(tropies)">Edit</button>
+              <button class="btn btn-outline-danger btn-sm" (click)="onDelete(tropies.$key)">Hapus</button>
+            </div>
+          </td>
+        </tr>
+      </ng-container>
+    </table>
+    <div class="alert alert-danger" *ngIf="showDeleteMessage">
+      Deleted successfully.
+    </div>
+  </div>
+</div>
+

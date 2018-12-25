@@ -1,0 +1,43 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.player-profile {
+  height: 100%;
+  margin-top: 8%;
+  font-weight: bolder;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.player-name {
+  height: 70px;
+}
+
+.player-number {}
+
+.player-position {
+  font-size: 15px;
+}
+
+.list-group-item:hover {
+  background: #b52e2b;
+  color: white;
+  transition: 0.3s all;
+}
+
+.list-group-item {
+  background: #E3E3E3;
+  color: black;
+  border: 0px solid rgb(76, 0, 255);
+}
+
+.list-group-item.active {
+  background: #b52e2b;
+  color: white;
+}

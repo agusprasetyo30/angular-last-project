@@ -1,0 +1,18 @@
+<!-- <app-history-add></app-history-add> -->
+<router-outlet></router-outlet>
+<div class="col-md-12">
+  <h3 style="font-weight: bolder; margin-bottom: 20px; display: inline-block">HISTORY</h3>
+  <a [routerLink]="['action']"
+    routerLinkActive="active"
+    class="float-right btn btn-primary text-white">Config</a>
+  <img src="assets/history.jpg" alt="Data" class="center">
+
+  <div class="row justify-content-center">
+    <div class="col-md-10 mt-4">
+      <div *ngFor="let history of historyArray" class="mt-4">
+        <h4 style="font-weight: bolder">{{history.title}}</h4>
+        <div>{{history.content}}</div>
+      </div>
+    </div>
+  </div>
+</div>

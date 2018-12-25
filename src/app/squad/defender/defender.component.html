@@ -1,0 +1,5 @@
+<div class="row">
+  <div class="col-md-4" *ngFor="let playerL of players; let i = index">
+    <app-defender-item [player]=playerL [index]=i></app-defender-item>
+  </div>
+</div>

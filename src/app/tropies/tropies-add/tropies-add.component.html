@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+  <div class="col-md-5">
+    <form [formGroup]="this.service()" (ngSubmit)="onSubmit()">
+      <input type="hidden" formControlName="$key">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input formControlName="title" id="title" class="form-control" [ngClass]="{'is-invalid': submitted && formControls.title.errors}">
+        <div class="invalid-feedback" *ngIf="submitted">
+          Title tidak boleh kosong !
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="champ_year">Champion Year's</label>
+        <textarea formControlName="champYear" id="champ_year" cols="30" rows="2" class="form-control" [ngClass]="{'is-invalid': submitted && formControls.champYear.errors}"></textarea>
+        <small class="invalid-feedback" *ngIf="submitted">
+          Champion year's tidak boleh kosong !
+        </small>
+      </div>
+      <div class="form-group">
+        <label for="photo">Link Photo</label>
+        <input formControlName="photo" id="photo" class="form-control" [ngClass]="{'is-invalid': submitted && formControls.photo.errors}" #imagePath>
+        <div class="invalid-feedback" *ngIf="submitted">
+          Link Photo tidak boleh kosong !
+        </div>
+        <div class="text-center">
+          <img [src]="imagePath.value" width="160px" height="200px" class="mt-2">
+        </div>
+      </div>
+      <div style="text-align: center">
+        <div class="btn-group">
+          <input type="submit" class="btn btn-primary" value="Submit">
+          <button class="btn btn-danger" (click)="this.service().reset()">Clear</button>
+          <a [routerLink]="['/tropies']" (click)="this.service().reset()" class="btn btn-info">Cancel</a>
+        </div>
+      </div>
+    </form>
+    <div class="alert alert-info" *ngIf="showSuccessMessage">
+      Submitted Succesfully
+    </div>
+  </div>
+  <div class="col-md-7">
+    <app-tropies-list-add></app-tropies-list-add>
+  </div>
+</div>

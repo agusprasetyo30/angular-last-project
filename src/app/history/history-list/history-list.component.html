@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-light table-hover table-inverse table-responsive">
+      <thead class="thead-inverse">
+        <tr align="center">
+          <th>Title</th>
+          <th>Content</th>
+          <th></th>
+        </tr>
+      </thead>
+      <ng-container *ngFor="let history of historyArray">
+        <tr>
+          <td>{{history.title}}</td>
+          <td>{{history.content}}</td>
+          <td>
+            <div class="btn-group">
+              <button class="btn btn-outline-info btn-sm" (click)="service().populateForm(history)">Edit</button>
+              <button class="btn btn-outline-danger btn-sm" (click)="onDelete(history.$key)">Hapus</button>
+            </div>
+          </td>
+        </tr>
+      </ng-container>
+    </table>
+    <div class="alert alert-danger" *ngIf="showDeleteMessage">
+      Deleted successfully.
+    </div>
+  </div>
+</div>
+
