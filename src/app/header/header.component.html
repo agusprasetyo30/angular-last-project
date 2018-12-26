@@ -1,6 +1,6 @@
 <div class="container">
   <div style="background: #b52e2b; width: 100%; height: 50px; position: relative;">
-    <a class="navbar-brand ml-5" href="#">
+    <a class="navbar-brand ml-5" [routerLink]="['/home']" style="cursor: pointer">
       <img class="img-fluid" src="/assets/img/logo.png" alt="logo" width="60">
     </a>
     <input type="text" class="search" name="" placeholder=" search">
@@ -22,12 +22,3 @@
     </ul>
   </nav>
 </div>
-
-<!-- <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-     aria-expanded="false">Dropdown</a>
-  <div class="dropdown-menu" aria-labelledby="dropdownId">
-    <a class="dropdown-item" href="#">Action 1</a>
-    <a class="dropdown-item" href="#">Action 2</a>
-  </div>
-</li> -->
